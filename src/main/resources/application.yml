@@ -1,14 +1,31 @@
 spring:
   application:
-    name: EurekaServer
+    name: gateway
 
 server:
-  port: 8700
+  port: 8000
 
 eureka:
   instance:
-    hostname: localhost
+    leaseRenewalIntervalInSeconds: 5
   client:
-    registerWithEureka: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+# Api-Gate-Way
+zuul:
+  prefix: /api
+  routes:
+    organisation-service:
+      path: /organisation-service/**
+      serviceId: API-ORGANISATION
+      sensitiveHeaders: Cookie,Set-Cookie
+      
+# Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000

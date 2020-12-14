@@ -6,7 +6,7 @@
 env=$1
 # deploy port SECOND ARGUMENT
 # Ex: 8090 | 8091 | 8092 
-serverPort=8000
+serverPort=$2
 # THIRD ARGUMENT project name, deploy folder name and jar name
 projectName=$3 #spring-boot
 # FOURTH ARGUMENT external config file name
@@ -17,7 +17,7 @@ configFile=$4
 #### CONFIGURABLE VARIABLES ######
 #destination absolute path. It must be pre created or you can
 # improve this script to create if not exists
-destAbsPath=/home/ubuntu/projects/crm/deploy/back
+destAbsPath=/home/rcoli/Desktop/$projectName/$env
 configFolder=resources
 ##############################################################
 
@@ -25,7 +25,7 @@ configFolder=resources
 ##### DONT CHANGE HERE ##############
 #jar file
 # $WORKSPACE is a jenkins var
-sourFile=$WORKSPACE/$projectName*.jar
+sourFile=$WORKSPACE/api/build/libs/$projectName*.jar
 destFile=$destAbsPath/$projectName.jar
 
 #config files folder
@@ -79,7 +79,7 @@ function run(){
 
    #echo "java -jar $destFile --server.port=$serverPort $properties" | at now + 1 minutes
 
-   nohup nice java -jar $destFile --server.port=$serverPort &
+   nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &
 
    echo "COMMAND: nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &"
 

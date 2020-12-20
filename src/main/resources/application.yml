@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gateway
+    name: api-back-gateway
 
 server:
   port: 8000

@@ -31,4 +31,18 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 1000000
+            
+security:
+  user:
+    name: root
+    password: password
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8000/uua/oauth/token
+      userAuthorizationUri: http://localhost:8000/uua/oauth/authorize
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: http://localhost:8000/uaa/user
+      preferTokenInfo: false  
+  sessions: ALWAYS            
 

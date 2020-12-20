@@ -16,9 +16,9 @@ eureka:
 zuul:
   prefix: /api
   routes:
-    organisation-service:
+    api-organisation-service:
       path: /organisation-service/**
-      serviceId: API-ORGANISATION
+      serviceId: api-organisation-service
       sensitiveHeaders: Cookie,Set-Cookie
       
 # Increase the Hystrix timeout to 60s (globally)

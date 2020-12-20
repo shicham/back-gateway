@@ -20,6 +20,10 @@ zuul:
       path: /api-back-organization/**
       serviceId: api-back-organization
       sensitiveHeaders: Cookie,Set-Cookie
+    uaa:
+      path: /uaa/**
+      sensitiveHeaders:
+      serviceId: back-auth
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 1000000

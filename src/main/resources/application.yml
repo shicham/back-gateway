@@ -20,10 +20,6 @@ zuul:
       path: /api-back-organization/**
       serviceId: api-back-organization
       sensitiveHeaders: Cookie,Set-Cookie
-    uaa:
-      path: /uaa/**
-      sensitiveHeaders:
-      serviceId: back-auth
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 1000000
@@ -35,18 +31,3 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 1000000
-            
-security:
-  user:
-    name: root
-    password: password
-  oauth2:
-    client:
-      accessTokenUri: http://51.68.44.179:8000/uua/oauth/token
-      userAuthorizationUri: http://51.68.44.179:8000/uua/oauth/authorize
-      clientAuthenticationScheme: form
-    resource:
-      userInfoUri: http://51.68.44.179:8000/uaa/user
-      preferTokenInfo: false  
-  sessions: ALWAYS            
-

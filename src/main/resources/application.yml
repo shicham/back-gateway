@@ -42,11 +42,11 @@ security:
     password: password
   oauth2:
     client:
-      accessTokenUri: http://localhost:8000/uua/oauth/token
-      userAuthorizationUri: http://localhost:8000/uua/oauth/authorize
+      accessTokenUri: http://51.68.44.179:8000/uua/oauth/token
+      userAuthorizationUri: http://51.68.44.179:8000/uua/oauth/authorize
       clientAuthenticationScheme: form
     resource:
-      userInfoUri: http://localhost:8000/uaa/user
+      userInfoUri: http://51.68.44.179:8000/uaa/user
       preferTokenInfo: false  
   sessions: ALWAYS            
 

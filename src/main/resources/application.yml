@@ -21,7 +21,7 @@ zuul:
   routes:
     api-back-organization:
       path: /api-back-organization/**
-      serviceId: API-BACK-ORGANIZATION
+      serviceId: efa35f6e809e
       #url: http://51.68.44.179:8010/api-back-organization
       sensitiveHeaders: Cookie,Set-Cookie
   host:

@@ -30,7 +30,7 @@ zuul:
 
 ribbon:
   eureka:
-    enabled: true
+    enabled: false
 
 hystrix:
   command:

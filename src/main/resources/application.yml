@@ -8,6 +8,8 @@ server:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
   client:
     serviceUrl:
       defaultZone: http://51.68.44.179:8700/eureka/

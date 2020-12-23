@@ -14,6 +14,7 @@ eureka:
 
 # Api-Gate-Way
 zuul:
+  ignoredServices: "*"
   prefix: /api
   routes:
     api-back-organization:

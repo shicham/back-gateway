@@ -18,7 +18,7 @@ zuul:
   routes:
     api-back-organization:
       path: /api-back-organization/**
-      serviceId: api-back-organization
+      serviceId: API-BACK-ORGANIZATION
       sensitiveHeaders: Cookie,Set-Cookie
   host:
     connect-timeout-millis: 10000

@@ -24,6 +24,11 @@ zuul:
       #serviceId: efa35f6e809e
       url: http://51.68.44.179:8010/api-back-organization
       sensitiveHeaders: Cookie,Set-Cookie
+    back-auth:
+      path: /back-auth/**
+      #serviceId: efa35f6e809e
+      url: http://51.68.44.179:9000/public
+      sensitiveHeaders: Cookie,Set-Cookie    
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 1000000

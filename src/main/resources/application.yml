@@ -27,7 +27,7 @@ zuul:
     back-auth:
       path: /back-auth/**
       #serviceId: efa35f6e809e
-      url: http://51.68.44.179:9000/public
+      url: http://51.68.44.179:9000
       sensitiveHeaders: Cookie,Set-Cookie    
   host:
     connect-timeout-millis: 10000

@@ -22,7 +22,7 @@ zuul:
     api-back-organization:
       path: /api-back-organization/**
       #serviceId: efa35f6e809e
-      url: http://51.68.44.179:8010/api-back-organization
+      url: http://51.68.44.179:8010/organization
       sensitiveHeaders: Cookie,Set-Cookie
     back-auth:
       path: /back-auth/**

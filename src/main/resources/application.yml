@@ -20,9 +20,9 @@ zuul:
   prefix: /api
   routes:
     api-back-organization:
-      path: /api-back-organization/**
+      path: /organization/**
       #serviceId: efa35f6e809e
-      url: http://51.68.44.179:8010/organization
+      url: http://51.68.44.179:8010
       sensitiveHeaders: Cookie,Set-Cookie
     back-auth:
       path: /back-auth/**

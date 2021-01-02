@@ -10,7 +10,7 @@ public class WebConfiguration implements WebMvcConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		System.out.println("CorsRegistry " + registry);
-		registry.addMapping("/**").allowedOrigins("*").allowedOrigins("http://51.68.44.179","http://51.68.44.179/","http://51.68.44.179/authenticate","http://51.68.44.179/#/login","51.68.44.179").allowedMethods("GET", "POST", "DELETE",
+		registry.addMapping("/**").allowedOrigins("*").allowedOrigins("http://51.68.44.179","http://51.68.44.179/","http://51.68.44.179/authenticate","http://localhost:8080","51.68.44.179").allowedMethods("GET", "POST", "DELETE",
 				"PUT");
 	}
 

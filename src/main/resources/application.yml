@@ -24,6 +24,11 @@ zuul:
       #serviceId: efa35f6e809e
       url: http://51.68.44.179:8010
       sensitiveHeaders: Cookie,Set-Cookie
+    api-back-referentiel:
+      path: /service-referentiel/**
+      #serviceId: efa35f6e809e
+      url: http://51.68.44.179:8010
+      sensitiveHeaders: Cookie,Set-Cookie
     back-auth:
       path: /back-auth/**
       #serviceId: efa35f6e809e
